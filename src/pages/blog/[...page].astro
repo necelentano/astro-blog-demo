@@ -5,6 +5,7 @@ import { formatBlogPosts } from "../../js/utils";
 import PostCard from "../../components/PostCard.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Pagination from "../../components/Pagination.astro";
+import CategoryCloud from "../../components/CategoryCloud.astro";
 
 export async function getStaticPaths({paginate}) {
     const allPosts = await Astro.glob('./*.md')
@@ -33,4 +34,8 @@ const { url } : { url: any } = page;
         </div>
         <Pagination prevUrl={url.prev} nextUrl={url.next}/>
     </section>
+    <aside class="container" aria-label="Blog categories">
+        <h2 class="h3">Blog Categories</h2>
+        <CategoryCloud showCount={true} />
+    </aside>
 </MainLayout>
