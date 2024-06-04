@@ -1,8 +1,13 @@
 ---
+// library imports
+import { Icon } from 'astro-icon/components';
 ---
 
 <footer>
-      <small>Copyright &copy; <span id="copyright"></span> | All rights reserved</small>
+    <div>
+        <small>Copyright &copy; <span id="copyright"></span> | All rights reserved</small>
+        <small><a href="/rss.xml">Subscribe to RSS <Icon name="tabler:rss" width={20} height={20}/></a></small>
+    </div>
 </footer>
 
 <script>
